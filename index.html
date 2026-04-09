@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SI DESAPAREZCO, USEN ESTA FOTO</title>
+    <meta name="description"
+        content="Repositorio preventivo de identidad. Un ejercicio de soberanía radical sobre tu propio rastro. Cifrado de extremo a extremo, sin servidores.">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Vignette overlay (Interspecifics-style) -->
+    <div class="vignette" aria-hidden="true"></div>
+
+    <!-- ═══════════════════════════════════════════════ -->
+    <!-- PANTALLA 0: LANDING / MANIFIESTO               -->
+    <!-- ═══════════════════════════════════════════════ -->
+    <section id="screen-landing" class="screen active">
+        <header class="landing-header">
+            <div class="header-left">
+                <h1 class="title-main">
+                    SI DESAPAREZCO,<br>
+                    <span class="title-accent">USEN ESTA FOTO</span>
+                </h1>
+                <div class="author-credit author-credit-link" onclick="openArtistModal()">
+                    MANUEL MENDOZA — 2026
+                    <span class="author-hint">Click para conocer al artista →</span>
+                </div>
+
+
+            </div>
+            <div class="header-right">
+                <div class="terms-check">
+                    <label class="checkbox-label" for="accept-terms">
+                        <input type="checkbox" id="accept-terms" onchange="toggleBeginButton()">
+                        <span>He leído y acepto el <a href="#"
+                                onclick="event.preventDefault(); openPrivacyModal()">Aviso de Privacidad</a></span>
+                    </label>
+                </div>
+                <button id="btn-begin" class="btn-primary" onclick="navigateTo('screen-capture')" disabled>
+                    INICIAR PROTOCOLO
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                </button>
+                <button class="btn-secondary" onclick="navigateTo('screen-decrypt')">
+                    ABRIR ARCHIVO EXISTENTE
+                </button>
+            </div>
+        </header>
+
+        <div class="hairline"></div>
+
+        <div class="manifesto">
+            <h2 class="manifesto-section-title">Resumen Conceptual</h2>
+
+            <p>
+                ¿Cómo se habita la posibilidad de la propia ausencia? <mark>«Si desaparezco, usen esta foto»</mark> es
+                una plataforma web y un ejercicio de <mark>realismo traumático</mark> que confronta al usuario con la
+                fragilidad de su presencia en un contexto de crisis forense y social.
+            </p>
+
+            <p>
+                La obra surge de una observación técnica y dolorosa: la mayoría de las fichas de búsqueda de personas
+                desaparecidas utilizan imágenes precarias —fotografías recortadas de eventos sociales, capturas de
+                pantalla pixeladas o retratos donde el rostro está parcialmente oculto—. En el momento del colapso, la
+                familia no solo enfrenta la pérdida, sino la carencia de una imagen digna y funcional que permita la
+                identificación efectiva, tanto por el ojo humano como por algoritmos de visión artificial.
+            </p>
+
+            <div class="hairline"></div>
+
+            <h3 class="manifesto-section-title">La Obra como Dispositivo</h3>
+
+            <p>
+                La plataforma opera como un <mark>repositorio preventivo de la identidad</mark>. A través de una
+                interfaz que guía al usuario en un ritual de auto-archivo, el sistema permite capturar un retrato de
+                alta fidelidad, registrar señas particulares, tatuajes, cicatrices y datos biométricos esenciales. No es
+                un trámite administrativo; es un acto de <mark>vigilancia afectiva</mark> hacia uno mismo y un gesto de
+                cuidado extremo para los que se quedan.
+            </p>
+
+            <p>
+                En esta pieza, la tecnología no busca vigilar para castigar, sino <mark>preservar para no
+                    olvidar</mark>. El navegador web se transforma en una cámara de seguridad personal, convirtiendo el
+                miedo en una infraestructura de datos lista para ser activada, esperando —con esperanza y terror— no
+                tener que ser utilizada jamás.
+            </p>
+
+            <div class="hairline"></div>
+
+            <h3 class="manifesto-section-title">Soberanía y Latencia (Seguridad)</h3>
+
+            <p>
+                La obra propone una lógica de <mark>soberanía radical</mark> sobre el propio rastro. A diferencia de las
+                bases de datos estatales, este archivo es privado y está protegido por el usuario:
+            </p>
+
+            <p>
+                <strong>El Acceso Cifrado:</strong> Cada ficha de búsqueda vive en un estado de latencia protegida. El
+                sistema genera un acceso cifrado cuya llave pertenece exclusivamente al usuario.
+            </p>
+
+            <p>
+                <strong>La Llave Delegada:</strong> El usuario decide a quién entregarle la contraseña (familiares,
+                amigos o colectivos). Solo en el momento de la emergencia, la llave activa el archivo.
+            </p>
+
+            <div class="hairline"></div>
+
+            <h3 class="manifesto-section-title">Conclusión</h3>
+
+            <p>
+                «Si desaparezco, usen esta foto» se sitúa en la tensión ética de lo que nadie desea usar, pero que la
+                realidad vuelve indispensable. Es un <mark>memento mori contemporáneo</mark> que desplaza la
+                responsabilidad de la imagen de la familia en duelo hacia el sujeto presente, permitiendo que la
+                identidad sea protegida y entregada como un último recurso de visibilidad y justicia.
+            </p>
+
+            <div class="hairline"></div>
+
+
+
+            <div class="hairline"></div>
+
+            <p>
+                <mark>CIFRADO ZERO-KNOWLEDGE</mark> — Tus datos nunca salen de tu navegador. Sin servidores. Sin bases
+                de datos. Solo tú y tu archivo cifrado.
+            </p>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════ -->
+    <!-- PANTALLA 1: CAPTURA DE RETRATO                 -->
+    <!-- ═══════════════════════════════════════════════ -->
+    <section id="screen-capture" class="screen">
+        <div class="step-indicator">
+            <span class="step active">01</span>
+            <span class="step-line"></span>
+            <span class="step">02</span>
+            <span class="step-line"></span>
+            <span class="step">03</span>
+            <span class="step-line"></span>
+            <span class="step">04</span>
+        </div>
+
+        <div class="capture-layout">
+            <!-- Left: Camera -->
+            <div class="capture-left">
+                <div id="camera-container" class="camera-container">
+                    <video id="camera-feed" autoplay playsinline></video>
+                    <canvas id="camera-canvas" style="display:none;"></canvas>
+
+                    <!-- Face guide overlay -->
+                    <div class="face-guide">
+                        <svg viewBox="0 0 300 400" class="face-oval">
+                            <ellipse cx="150" cy="180" rx="100" ry="130" fill="none" stroke="currentColor"
+                                stroke-width="1" stroke-dasharray="8 4" opacity="0.5" />
+                            <line x1="150" y1="40" x2="150" y2="60" stroke="currentColor" stroke-width="1"
+                                opacity="0.3" />
+                            <line x1="150" y1="300" x2="150" y2="320" stroke="currentColor" stroke-width="1"
+                                opacity="0.3" />
+                            <line x1="40" y1="180" x2="60" y2="180" stroke="currentColor" stroke-width="1"
+                                opacity="0.3" />
+                            <line x1="240" y1="180" x2="260" y2="180" stroke="currentColor" stroke-width="1"
+                                opacity="0.3" />
+                        </svg>
+                    </div>
+
+                    <!-- Captured image preview -->
+                    <img id="captured-preview" class="captured-preview" style="display:none;" alt="Retrato capturado">
+
+                    <div id="camera-status" class="camera-status">
+                        CONECTANDO CÁMARA...
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Instructions + Controls -->
+            <div class="capture-right">
+                <h2 class="section-title">RETRATO DE ALTA FIDELIDAD</h2>
+
+                <p class="section-desc">
+                    Captura una fotografía frontal, con buena iluminación y fondo neutro.
+                    Este será tu retrato de identificación.
+                </p>
+
+                <div class="capture-instructions">
+                    <p><mark>BUENA ILUMINACIÓN</mark> — Que tu rostro sea visible sin sombras</p>
+                    <p><mark>FONDO NEUTRO</mark> — Pared blanca o lisa de preferencia</p>
+                    <p><mark>MIRADA FRONTAL</mark> — Directo a la cámara, sin accesorios</p>
+                    <p><mark>ALTA RESOLUCIÓN</mark> — La imagen se almacena sin compresión</p>
+                </div>
+
+                <div class="capture-controls">
+                    <button id="btn-capture" class="btn-capture" onclick="capturePhoto()" disabled>
+                        <div class="capture-ring">
+                            <div class="capture-dot"></div>
+                        </div>
+                        <span>CAPTURAR ROSTRO</span>
+                    </button>
+                    <button id="btn-retake" class="btn-secondary" onclick="retakePhoto()" style="display:none;">
+                        RETOMAR
+                    </button>
+                    <button id="btn-upload" class="btn-tertiary" onclick="triggerUpload()">
+                        O SUBIR ARCHIVO
+                    </button>
+                    <input type="file" id="file-upload" accept="image/*" style="display:none;"
+                        onchange="handleFileUpload(event)">
+                </div>
+
+                <div class="hairline"></div>
+
+                <!-- Foto cuerpo completo (opcional) -->
+                <div class="body-photo-section">
+                    <h3 class="subsection-title">FOTO DE CUERPO COMPLETO <span class="optional-tag">(OPCIONAL)</span>
+                    </h3>
+                    <p class="section-desc">Captura una fotografía de cuerpo completo para facilitar la identificación.
+                    </p>
+                    <div class="body-photo-controls">
+                        <button id="btn-body-capture" class="btn-secondary" onclick="openMarkCamera('body')">
+                            CAPTURAR CON CÁMARA
+                        </button>
+                        <button class="btn-tertiary" onclick="document.getElementById('body-file').click()">
+                            O SUBIR ARCHIVO
+                        </button>
+                        <input type="file" id="body-file" accept="image/*" style="display:none;"
+                            onchange="handleBodyPhoto(event)">
+                    </div>
+                    <div id="body-preview" class="body-photo-preview"></div>
+                </div>
+
+                <div class="nav-buttons">
+                    <button class="btn-back" onclick="navigateTo('screen-landing')">← ATRÁS</button>
+                    <button id="btn-to-data" class="btn-primary" onclick="navigateTo('screen-data')" disabled>
+                        CONTINUAR →
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════ -->
+    <!-- PANTALLA 2: DATOS Y SEÑAS PARTICULARES         -->
+    <!-- ═══════════════════════════════════════════════ -->
+    <section id="screen-data" class="screen">
+        <div class="step-indicator">
+            <span class="step done">01</span>
+            <span class="step-line filled"></span>
+            <span class="step active">02</span>
+            <span class="step-line"></span>
+            <span class="step">03</span>
+            <span class="step-line"></span>
+            <span class="step">04</span>
+        </div>
+
+        <h2 class="section-title">REGISTRO DE IDENTIDAD</h2>
+        <p class="section-desc">
+            Completa los campos que consideres relevantes.
+            Entre más datos, mayor la probabilidad de identificación.
+        </p>
+
+        <form id="identity-form" class="identity-form">
+            <!-- Datos Personales -->
+            <fieldset class="form-group">
+                <legend class="group-legend">DATOS PERSONALES</legend>
+
+                <div class="field-row">
+                    <div class="field">
+                        <label for="nombre">NOMBRE COMPLETO *</label>
+                        <input type="text" id="nombre" required placeholder="Como aparece en tu identificación">
+                    </div>
+                </div>
+
+                <div class="field-row two-col">
+                    <div class="field">
+                        <label for="edad">EDAD</label>
+                        <input type="number" id="edad" min="0" max="120" placeholder="Años">
+                    </div>
+                    <div class="field">
+                        <label for="fecha-nacimiento">FECHA DE NACIMIENTO</label>
+                        <input type="date" id="fecha-nacimiento">
+                    </div>
+                </div>
+
+                <div class="field-row two-col">
+                    <div class="field">
+                        <label for="estatura">ESTATURA (cm)</label>
+                        <input type="number" id="estatura" min="50" max="250" placeholder="170">
+                    </div>
+                    <div class="field">
+                        <label for="peso">PESO (kg)</label>
+                        <input type="number" id="peso" min="10" max="300" placeholder="70">
+                    </div>
+                </div>
+
+                <div class="field-row two-col">
+                    <div class="field">
+                        <label for="complexion">COMPLEXIÓN</label>
+                        <select id="complexion">
+                            <option value="">Seleccionar...</option>
+                            <option value="delgada">Delgada</option>
+                            <option value="media">Media</option>
+                            <option value="robusta">Robusta</option>
+                            <option value="atletica">Atlética</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label for="tez">TEZ</label>
+                        <select id="tez">
+                            <option value="">Seleccionar...</option>
+                            <option value="clara">Clara</option>
+                            <option value="media">Media</option>
+                            <option value="morena-clara">Morena clara</option>
+                            <option value="morena">Morena</option>
+                            <option value="oscura">Oscura</option>
+                        </select>
+                    </div>
+                </div>
+            </fieldset>
+
+            <!-- Señas Particulares -->
+            <fieldset class="form-group">
+                <legend class="group-legend">SEÑAS PARTICULARES</legend>
+
+                <div class="field">
+                    <label for="cabello">CABELLO</label>
+                    <input type="text" id="cabello" placeholder="Color, largo, estilo">
+                </div>
+
+                <div class="field">
+                    <label for="ojos">OJOS</label>
+                    <input type="text" id="ojos" placeholder="Color, forma, usa lentes">
+                </div>
+
+                <div class="field">
+                    <label for="tatuajes">TATUAJES</label>
+                    <textarea id="tatuajes" rows="3" placeholder="Descripción y ubicación en el cuerpo"></textarea>
+                </div>
+
+                <!-- Fotos de tatuajes -->
+                <div class="field">
+                    <label>FOTOS DE TATUAJES</label>
+                    <div class="mark-photo-actions">
+                        <button type="button" class="btn-secondary btn-sm" onclick="openMarkCamera('tattoo')">
+                            CAPTURAR CON CÁMARA
+                        </button>
+                        <button type="button" class="btn-tertiary"
+                            onclick="document.getElementById('tattoo-files').click()">
+                            O SUBIR ARCHIVO
+                        </button>
+                    </div>
+                    <input type="file" id="tattoo-files" accept="image/*" multiple style="display:none;"
+                        onchange="handleMarkPhotos(event, 'tattoo')">
+                    <div id="tattoo-previews" class="mark-photo-previews"></div>
+                </div>
+
+                <div class="field">
+                    <label for="cicatrices">CICATRICES</label>
+                    <textarea id="cicatrices" rows="3" placeholder="Descripción y ubicación en el cuerpo"></textarea>
+                </div>
+
+                <!-- Fotos de cicatrices -->
+                <div class="field">
+                    <label>FOTOS DE CICATRICES</label>
+                    <div class="mark-photo-actions">
+                        <button type="button" class="btn-secondary btn-sm" onclick="openMarkCamera('scar')">
+                            CAPTURAR CON CÁMARA
+                        </button>
+                        <button type="button" class="btn-tertiary"
+                            onclick="document.getElementById('scar-files').click()">
+                            O SUBIR ARCHIVO
+                        </button>
+                    </div>
+                    <input type="file" id="scar-files" accept="image/*" multiple style="display:none;"
+                        onchange="handleMarkPhotos(event, 'scar')">
+                    <div id="scar-previews" class="mark-photo-previews"></div>
+                </div>
+
+                <div class="field">
+                    <label for="otras-senas">OTRAS SEÑAS DISTINTIVAS</label>
+                    <textarea id="otras-senas" rows="3"
+                        placeholder="Lunares, marcas de nacimiento, prótesis, piercings..."></textarea>
+                </div>
+
+                <!-- Fotos de otras señas -->
+                <div class="field">
+                    <label>FOTOS DE SEÑAS PARTICULARES</label>
+                    <div class="mark-photo-actions">
+                        <button type="button" class="btn-secondary btn-sm" onclick="openMarkCamera('marks')">
+                            CAPTURAR CON CÁMARA
+                        </button>
+                        <button type="button" class="btn-tertiary"
+                            onclick="document.getElementById('marks-files').click()">
+                            O SUBIR ARCHIVO
+                        </button>
+                    </div>
+                    <input type="file" id="marks-files" accept="image/*" multiple style="display:none;"
+                        onchange="handleMarkPhotos(event, 'marks')">
+                    <div id="marks-previews" class="mark-photo-previews"></div>
+                </div>
+            </fieldset>
+
+            <!-- Información de Contacto de Emergencia -->
+            <fieldset class="form-group">
+                <legend class="group-legend">CONTACTO DE EMERGENCIA</legend>
+
+                <div class="field">
+                    <label for="contacto-nombre">NOMBRE DEL CONTACTO</label>
+                    <input type="text" id="contacto-nombre" placeholder="Persona de confianza">
+                </div>
+
+                <div class="field-row two-col">
+                    <div class="field">
+                        <label for="contacto-tel">TELÉFONO</label>
+                        <input type="tel" id="contacto-tel" placeholder="+52...">
+                    </div>
+                    <div class="field">
+                        <label for="contacto-relacion">RELACIÓN</label>
+                        <input type="text" id="contacto-relacion" placeholder="Familiar, amigo, colectivo...">
+                    </div>
+                </div>
+            </fieldset>
+
+            <!-- Última Ubicación Conocida -->
+            <fieldset class="form-group">
+                <legend class="group-legend">UBICACIÓN HABITUAL</legend>
+
+                <div class="field">
+                    <label for="ubicacion">CIUDAD / ESTADO</label>
+                    <input type="text" id="ubicacion" placeholder="Dónde vives o transitas habitualmente">
+                </div>
+
+                <div class="field">
+                    <label for="notas">NOTAS ADICIONALES</label>
+                    <textarea id="notas" rows="4"
+                        placeholder="Cualquier información adicional que consideres relevante para tu identificación"></textarea>
+                </div>
+            </fieldset>
+        </form>
+
+        <div class="nav-buttons">
+            <button class="btn-back" onclick="navigateTo('screen-capture')">← ATRÁS</button>
+            <button class="btn-primary" onclick="navigateTo('screen-encrypt')">
+                CONTINUAR →
+            </button>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════ -->
+    <!-- PANTALLA 3: CIFRADO Y CONTRASEÑA               -->
+    <!-- ═══════════════════════════════════════════════ -->
+    <section id="screen-encrypt" class="screen">
+        <div class="step-indicator">
+            <span class="step done">01</span>
+            <span class="step-line filled"></span>
+            <span class="step done">02</span>
+            <span class="step-line filled"></span>
+            <span class="step active">03</span>
+            <span class="step-line"></span>
+            <span class="step">04</span>
+        </div>
+
+        <h2 class="section-title">CIFRADO DE TU ARCHIVO</h2>
+        <p class="section-desc">
+            Crea una contraseña que protegerá tu ficha.
+            Esta contraseña es la llave que entregarás a quien tú decidas —
+            tu familiar, tu colectivo, tu persona de confianza.
+        </p>
+
+        <div class="encrypt-layout">
+            <div class="password-section">
+                <div class="field">
+                    <label for="password">CONTRASEÑA DE CIFRADO *</label>
+                    <div class="password-input-wrapper">
+                        <input type="password" id="password" required placeholder="Mínimo 8 caracteres" minlength="8"
+                            oninput="validatePassword()">
+                        <button type="button" class="toggle-password" onclick="togglePassword('password')">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                                <circle cx="12" cy="12" r="3" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label for="password-confirm">CONFIRMAR CONTRASEÑA *</label>
+                    <div class="password-input-wrapper">
+                        <input type="password" id="password-confirm" required placeholder="Repite la contraseña"
+                            minlength="8" oninput="validatePassword()">
+                        <button type="button" class="toggle-password" onclick="togglePassword('password-confirm')">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                                <circle cx="12" cy="12" r="3" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div id="password-feedback" class="password-feedback"></div>
+
+                <div class="password-strength">
+                    <div class="strength-bar">
+                        <div id="strength-fill" class="strength-fill"></div>
+                    </div>
+                    <span id="strength-label" class="strength-label">—</span>
+                </div>
+            </div>
+
+            <div class="encrypt-info">
+                <p>
+                    <mark>IMPORTANTE</mark> — Si pierdes esta contraseña,
+                    no hay forma de recuperar tu archivo. No existe respaldo,
+                    no existe puerta trasera. Esa es la garantía.
+                </p>
+
+                <div class="hairline"></div>
+
+                <h3 class="subsection-title">LA LLAVE DELEGADA</h3>
+                <p>
+                    Decide a quién entregarle esta contraseña. Solo en el momento
+                    de la emergencia, esa persona podrá abrir tu archivo y generar
+                    tu ficha de búsqueda.
+                </p>
+            </div>
+        </div>
+
+        <div class="nav-buttons">
+            <button class="btn-back" onclick="navigateTo('screen-data')">← ATRÁS</button>
+            <button id="btn-encrypt" class="btn-primary btn-encrypt" onclick="encryptAndExport()" disabled>
+                CIFRAR Y GENERAR ARCHIVO
+            </button>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════ -->
+    <!-- PANTALLA 4: EXPORTACIÓN / COMPLETADO           -->
+    <!-- ═══════════════════════════════════════════════ -->
+    <section id="screen-complete" class="screen">
+        <div class="step-indicator">
+            <span class="step done">01</span>
+            <span class="step-line filled"></span>
+            <span class="step done">02</span>
+            <span class="step-line filled"></span>
+            <span class="step done">03</span>
+            <span class="step-line filled"></span>
+            <span class="step active">04</span>
+        </div>
+
+        <h2 class="section-title">ARCHIVO CIFRADO GENERADO</h2>
+        <p class="section-desc">
+            Tu ficha de identidad ha sido cifrada con <mark>AES-256-GCM</mark>
+            y exportada como un archivo protegido.
+        </p>
+
+        <div class="complete-layout">
+            <div class="file-info">
+                <span id="file-name" class="file-name">ficha.sidf</span>
+                <span id="file-size" class="file-size">—</span>
+            </div>
+
+            <button id="btn-download" class="btn-primary" onclick="downloadFile()">
+                DESCARGAR ARCHIVO .SIDF
+            </button>
+
+            <div class="hairline"></div>
+
+            <div class="instructions-text">
+                <h3>¿QUÉ HACER AHORA?</h3>
+                <p>1. Guarda el archivo <mark>.sidf</mark> en un lugar seguro (USB, nube cifrada)</p>
+                <p>2. Entrega la contraseña a tu persona de confianza</p>
+                <p>3. En caso de emergencia, esa persona puede abrir este sitio, cargar el archivo y generar tu ficha de
+                    búsqueda</p>
+            </div>
+
+            <div class="hairline"></div>
+
+            <button class="btn-secondary" onclick="navigateTo('screen-decrypt')">
+                ABRIR UN ARCHIVO EXISTENTE
+            </button>
+
+            <button class="btn-tertiary" onclick="resetAll()">
+                CREAR OTRA FICHA
+            </button>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════ -->
+    <!-- PANTALLA 5: DESCIFRADO / APERTURA              -->
+    <!-- ═══════════════════════════════════════════════ -->
+    <section id="screen-decrypt" class="screen">
+        <h2 class="section-title">ABRIR ARCHIVO CIFRADO</h2>
+        <p class="section-desc">
+            Si alguien te entregó un archivo <mark>.sidf</mark> y una contraseña,
+            aquí puedes descifrarlo y generar la ficha de búsqueda.
+        </p>
+
+        <div class="decrypt-layout">
+            <div class="upload-zone" id="decrypt-upload-zone" ondragover="handleDragOver(event)"
+                ondrop="handleFileDrop(event)" onclick="document.getElementById('decrypt-file-input').click()">
+                <span>Arrastra un archivo .sidf aquí o haz clic para seleccionar</span>
+                <input type="file" id="decrypt-file-input" accept=".sidf" style="display:none;"
+                    onchange="handleDecryptFile(event)">
+            </div>
+
+            <div id="decrypt-file-loaded" class="decrypt-file-loaded" style="display:none;">
+                <span id="decrypt-file-name"></span>
+            </div>
+
+            <div class="field">
+                <label for="decrypt-password">CONTRASEÑA</label>
+                <div class="password-input-wrapper">
+                    <input type="password" id="decrypt-password" placeholder="Ingresa la contraseña del archivo">
+                    <button type="button" class="toggle-password" onclick="togglePassword('decrypt-password')">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                            <circle cx="12" cy="12" r="3" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <button id="btn-decrypt" class="btn-primary" onclick="decryptFile()" disabled>
+                DESCIFRAR ARCHIVO
+            </button>
+
+            <div id="decrypt-error" class="decrypt-error" style="display:none;"></div>
+        </div>
+
+        <div class="nav-buttons">
+            <button class="btn-back" onclick="navigateTo('screen-landing')">← INICIO</button>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════ -->
+    <!-- PANTALLA 6: FICHA DE BÚSQUEDA GENERADA         -->
+    <!-- ═══════════════════════════════════════════════ -->
+    <section id="screen-ficha" class="screen">
+        <div id="ficha-output" class="ficha-output">
+            <div class="ficha-card" id="ficha-card">
+                <!-- ── HEADER ────────────────────────── -->
+                <div class="ficha-header">
+                    <div class="ficha-header-inner">
+                        <div class="ficha-logo">SI DESAPAREZCO</div>
+                        <div class="ficha-header-right">
+                            REPOSITORIO PREVENTIVO DE IDENTIDAD<br>
+                            FICHA DE BÚSQUEDA
+                        </div>
+                    </div>
+                    <div class="ficha-header-line"></div>
+                </div>
+
+                <!-- ── ALERT BAR ─────────────────────── -->
+                <div class="ficha-alert-bar">
+                    PERSONA DESAPARECIDA &nbsp;·&nbsp; SE SOLICITA INFORMACIÓN
+                </div>
+
+                <!-- ── MAIN: PHOTO + DATA ────────────── -->
+                <div class="ficha-body">
+                    <div class="ficha-photo-container">
+                        <img id="ficha-photo" class="ficha-photo" alt="Fotografía de la persona">
+                        <div id="ficha-photo-placeholder" class="ficha-photo-placeholder">
+                            <div class="placeholder-x"></div>
+                            <div class="placeholder-circle">
+                                <span>SIN FOTO</span>
+                                <span class="placeholder-sub">DISPONIBLE</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ficha-data">
+                        <div class="ficha-name" id="ficha-name"></div>
+                        <div class="ficha-name-line"></div>
+
+                        <!-- Data grid populated dynamically -->
+                        <div class="ficha-grid" id="ficha-grid-main">
+                            <!-- Populated dynamically -->
+                        </div>
+
+                        <div class="ficha-section-divider"></div>
+                        <div class="ficha-section-title">RASGOS FÍSICOS</div>
+
+                        <div class="ficha-grid" id="ficha-grid-physical">
+                            <!-- Populated dynamically -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ── SEÑAS PARTICULARES ─────────────── -->
+                <div class="ficha-section-divider-full"></div>
+                <div class="ficha-marks-section">
+                    <div class="ficha-section-title">SEÑAS PARTICULARES</div>
+                    <div class="ficha-marks" id="ficha-marks">
+                        <!-- Populated dynamically -->
+                    </div>
+                </div>
+
+                <!-- ── MARK PHOTOS ────────────────────── -->
+                <div id="ficha-marks-photos" class="ficha-marks-photos">
+                    <!-- Populated dynamically: tattoo/scar/mark photos -->
+                </div>
+
+                <!-- ── BODY PHOTO ─────────────────────── -->
+                <div id="ficha-body-photo" class="ficha-body-photo-section">
+                    <!-- Populated dynamically: full body photo -->
+                </div>
+
+                <!-- ── DATOS DE REGISTRO ──────────────── -->
+                <div class="ficha-section-divider-full"></div>
+                <div class="ficha-registro-section">
+                    <div class="ficha-section-title">DATOS DE REGISTRO</div>
+                    <div class="ficha-registro-grid" id="ficha-registro">
+                        <!-- Populated dynamically -->
+                    </div>
+                </div>
+
+                <!-- ── CTA GREEN BAR ──────────────────── -->
+                <div class="ficha-cta-bar" id="ficha-cta">
+                    Si tienes información sobre esta persona,
+                    contáctanos · <strong>SI DESAPAREZCO, USEN ESTA FOTO</strong>
+                </div>
+
+                <!-- ── CONTACT ────────────────────────── -->
+                <div class="ficha-contact-line" id="ficha-contact"></div>
+
+                <!-- ── FOOTER ─────────────────────────── -->
+                <div class="ficha-footer">
+                    <div class="ficha-footer-line"></div>
+                    <div class="ficha-generated" id="ficha-generated">
+                        SI DESAPAREZCO, USEN ESTA FOTO &nbsp;·&nbsp; Repositorio Preventivo de Identidad
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ficha-actions">
+            <button class="btn-primary" onclick="downloadFicha()">
+                DESCARGAR FICHA
+            </button>
+            <button class="btn-secondary" onclick="printFicha()">
+                IMPRIMIR
+            </button>
+            <button class="btn-tertiary" onclick="navigateTo('screen-landing')">
+                VOLVER AL INICIO
+            </button>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════ -->
+    <!-- MODAL: PROCESANDO                               -->
+    <!-- ═══════════════════════════════════════════════ -->
+    <div id="processing-overlay" class="processing-overlay" style="display:none;">
+        <div class="processing-content">
+            <div class="processing-spinner"></div>
+            <p id="processing-text" class="processing-text">CIFRANDO DATOS...</p>
+            <div class="processing-bar">
+                <div id="processing-fill" class="processing-fill"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════ -->
+    <!-- MODAL: AVISO DE PRIVACIDAD                     -->
+    <!-- ═══════════════════════════════════════════════ -->
+    <div id="privacy-modal" class="modal-overlay" style="display:none;">
+        <div class="modal-content privacy-modal-content">
+            <div class="modal-header">
+                <h2 class="section-title">AVISO DE PRIVACIDAD INTEGRAL</h2>
+                <button class="btn-close-modal" onclick="closePrivacyModal()">✕</button>
+            </div>
+            <div class="modal-body">
+                <p><mark>SI DESAPAREZCO, USEN ESTA FOTO</mark></p>
+                <p><strong>Responsable:</strong> Manuel Mendoza / Totot (en adelante, "el Responsable")<br>
+                    <strong>Contacto:</strong> manu@totot.mx<br>
+                    <strong>Última actualización:</strong> Abril 2025
+                </p>
+
+                <div class="hairline"></div>
+
+                <h3>I. IDENTIDAD Y DOMICILIO DEL RESPONSABLE</h3>
+                <p>Manuel Mendoza, con domicilio en la Ciudad de México, México, es el responsable del tratamiento de
+                    los datos personales que usted proporcione a través de la plataforma web «Si desaparezco, usen esta
+                    foto» (en adelante, "la Plataforma"). El presente Aviso de Privacidad se emite en cumplimiento de la
+                    Ley Federal de Protección de Datos Personales en Posesión de los Particulares (LFPDPPP) y su
+                    Reglamento.</p>
+
+                <h3>II. DATOS PERSONALES QUE SE RECABAN</h3>
+                <p>La Plataforma recaba las siguientes categorías de datos personales, proporcionados voluntariamente
+                    por el usuario:</p>
+                <p><strong>Datos de identificación:</strong> Nombre completo, edad, fecha de nacimiento, estatura, peso,
+                    complexión, color de tez, color y tipo de cabello, color de ojos.</p>
+                <p><strong>Datos biométricos y sensibles:</strong> Fotografía facial de alta resolución, fotografía de
+                    cuerpo completo (opcional), fotografías de señas particulares como tatuajes, cicatrices, lunares,
+                    marcas de nacimiento, prótesis y piercings. Estos datos se consideran <mark>datos personales
+                        sensibles</mark> conforme al artículo 3, fracción VI de la LFPDPPP.</p>
+                <p><strong>Datos de contacto de terceros:</strong> Nombre, teléfono y relación del contacto de
+                    emergencia designado por el usuario.</p>
+                <p><strong>Datos de ubicación:</strong> Ciudad y estado de residencia habitual.</p>
+
+                <h3>III. NATURALEZA ZERO-KNOWLEDGE DEL TRATAMIENTO</h3>
+                <p>La Plataforma opera bajo una arquitectura de <mark>conocimiento cero (Zero-Knowledge)</mark>. Esto
+                    significa que:</p>
+                <p>1. <strong>Ningún dato personal es transmitido, almacenado ni procesado en servidores del
+                        Responsable.</strong> Todo el procesamiento ocurre exclusivamente en el navegador web del
+                    usuario (client-side).</p>
+                <p>2. <strong>No existen bases de datos centralizadas.</strong> El Responsable no tiene acceso en ningún
+                    momento a los datos personales proporcionados por el usuario.</p>
+                <p>3. <strong>Los datos son cifrados localmente</strong> mediante el algoritmo AES-256-GCM con
+                    derivación de clave PBKDF2 (600,000 iteraciones) antes de ser exportados como un archivo cifrado
+                    (.sidf) que el usuario resguarda físicamente.</p>
+                <p>4. <strong>La contraseña de cifrado no es almacenada</strong> por la Plataforma. Solo el usuario (y
+                    las personas a quienes éste delegue la contraseña) pueden acceder al contenido del archivo.</p>
+                <p>5. <strong>No se utilizan cookies, rastreadores ni analíticas</strong> de ningún tipo. No se
+                    registran direcciones IP, huellas digitales del navegador ni metadatos de sesión.</p>
+
+                <h3>IV. FINALIDADES DEL TRATAMIENTO</h3>
+                <p><strong>Finalidades primarias (necesarias):</strong></p>
+                <p>a) Permitir al usuario la captura y registro voluntario de sus datos de identificación personal.<br>
+                    b) Cifrar los datos proporcionados mediante criptografía de grado militar.<br>
+                    c) Generar un archivo cifrado portable (.sidf) que el usuario descarga y resguarda.<br>
+                    d) Descifrar archivos .sidf existentes para la generación de fichas de búsqueda en caso de
+                    emergencia.</p>
+                <p><strong>Finalidades secundarias:</strong> No existen finalidades secundarias. Los datos no se
+                    utilizan para mercadotecnia, perfilamiento, publicidad, estudios estadísticos ni ningún otro fin.
+                </p>
+
+                <h3>V. CONSENTIMIENTO PARA DATOS SENSIBLES</h3>
+                <p>Dado que la Plataforma recaba datos personales sensibles (fotografías biométricas, señas físicas
+                    particulares), se requiere su <mark>consentimiento expreso</mark> conforme al artículo 9 de la
+                    LFPDPPP. Al marcar la casilla "He leído y acepto el Aviso de Privacidad" y hacer uso de la
+                    Plataforma, usted otorga su consentimiento expreso para el tratamiento de sus datos personales
+                    sensibles conforme a las finalidades aquí descritas.</p>
+                <p>Usted puede revocar su consentimiento en cualquier momento simplemente eliminando el archivo .sidf
+                    generado. Dado que el Responsable no almacena ni tiene acceso a sus datos, la eliminación del
+                    archivo constituye la destrucción completa e irrecuperable de la información.</p>
+
+                <h3>VI. TRANSFERENCIA DE DATOS</h3>
+                <p>El Responsable <strong>no transfiere ni comparte datos personales con terceros</strong>, nacionales o
+                    internacionales, ya que técnicamente no tiene acceso a los datos del usuario en ningún momento del
+                    proceso. La Plataforma no se conecta a servidores externos para el procesamiento de información
+                    personal.</p>
+
+                <h3>VII. DERECHOS ARCO</h3>
+                <p>Conforme a los artículos 28 a 35 de la LFPDPPP, usted tiene derecho a Acceder, Rectificar, Cancelar u
+                    Oponerse (derechos ARCO) al tratamiento de sus datos personales. Sin embargo, dado que el
+                    Responsable no almacena datos personales del usuario:</p>
+                <p>• <strong>Acceso:</strong> Usted accede a sus datos descifrando su archivo .sidf con su
+                    contraseña.<br>
+                    • <strong>Rectificación:</strong> Usted puede generar un nuevo archivo .sidf con datos actualizados
+                    en cualquier momento.<br>
+                    • <strong>Cancelación:</strong> Usted elimina sus datos destruyendo el archivo .sidf. No existe
+                    copia de respaldo.<br>
+                    • <strong>Oposición:</strong> Usted se opone al tratamiento simplemente no utilizando la Plataforma.
+                </p>
+                <p>Para cualquier solicitud relacionada con sus derechos ARCO que no pueda ejercer directamente mediante
+                    los mecanismos descritos, puede contactar al Responsable en: <strong>manu@totot.mx</strong></p>
+
+                <h3>VIII. MEDIDAS DE SEGURIDAD</h3>
+                <p>La Plataforma implementa las siguientes medidas de seguridad técnicas:</p>
+                <p>• Cifrado AES-256-GCM (estándar militar y bancario)<br>
+                    • Derivación de clave PBKDF2 con 600,000 iteraciones (recomendación OWASP 2024)<br>
+                    • Salt aleatorio de 128 bits por archivo<br>
+                    • Vector de inicialización (IV) aleatorio de 96 bits por operación<br>
+                    • Verificación de integridad mediante etiquetas de autenticación GCM<br>
+                    • Ausencia total de comunicación con servidores externos<br>
+                    • Código fuente abierto y auditable</p>
+
+                <h3>IX. MODIFICACIONES AL AVISO DE PRIVACIDAD</h3>
+                <p>El Responsable se reserva el derecho de modificar el presente Aviso de Privacidad. Cualquier
+                    modificación será publicada directamente en la Plataforma. Se recomienda al usuario revisar
+                    periódicamente este documento.</p>
+
+                <h3>X. LEGISLACIÓN APLICABLE Y JURISDICCIÓN</h3>
+                <p>El presente Aviso de Privacidad se rige por la Ley Federal de Protección de Datos Personales en
+                    Posesión de los Particulares (LFPDPPP), su Reglamento, y los Lineamientos del Aviso de Privacidad
+                    emitidos por el Instituto Nacional de Transparencia, Acceso a la Información y Protección de Datos
+                    Personales (INAI). Para cualquier controversia, las partes se someten a la jurisdicción de los
+                    tribunales competentes de la Ciudad de México.</p>
+
+                <h3>XI. CONSENTIMIENTO</h3>
+                <p>Al utilizar la Plataforma y marcar la casilla de aceptación, usted manifiesta que:</p>
+                <p>1. Ha leído y comprendido el presente Aviso de Privacidad Integral.<br>
+                    2. Otorga su consentimiento expreso para el tratamiento de sus datos personales sensibles.<br>
+                    3. Comprende que la seguridad de su archivo cifrado depende exclusivamente de la fortaleza de su
+                    contraseña y del resguardo físico del archivo .sidf.<br>
+                    4. Comprende que la pérdida de la contraseña implica la imposibilidad absoluta de recuperar los
+                    datos cifrados.<br>
+                    5. Libera al Responsable de toda responsabilidad derivada de la pérdida, robo o compromiso del
+                    archivo .sidf o de la contraseña por parte del usuario o terceros.</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-primary" onclick="closePrivacyModal()">CERRAR</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════ -->
+    <!-- MODAL: CÁMARA PARA SEÑAS PARTICULARES          -->
+    <!-- ═══════════════════════════════════════════════ -->
+    <div id="mark-camera-modal" class="modal-overlay" style="display:none;">
+        <div class="modal-content mark-camera-modal-content">
+            <div class="modal-header">
+                <h2 class="section-title" id="mark-camera-title">CAPTURAR FOTO</h2>
+                <button class="btn-close-modal" onclick="closeMarkCamera()">✕</button>
+            </div>
+            <div class="modal-body mark-camera-body">
+                <video id="mark-camera-feed" autoplay playsinline></video>
+                <canvas id="mark-camera-canvas" style="display:none;"></canvas>
+                <img id="mark-camera-preview" style="display:none;" alt="Vista previa">
+            </div>
+            <div class="modal-footer">
+                <button id="btn-mark-capture" class="btn-primary" onclick="captureMarkPhoto()">
+                    CAPTURAR
+                </button>
+                <button id="btn-mark-retake" class="btn-secondary" onclick="retakeMarkPhoto()" style="display:none;">
+                    RETOMAR
+                </button>
+                <button id="btn-mark-save" class="btn-primary" onclick="saveMarkPhoto()" style="display:none;">
+                    GUARDAR FOTO
+                </button>
+                <button class="btn-tertiary" onclick="closeMarkCamera()">CANCELAR</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════ -->
+    <!-- MODAL: FICHA DEL ARTISTA                       -->
+    <!-- ═══════════════════════════════════════════════ -->
+    <div id="artist-modal" class="modal-overlay" style="display:none;">
+        <div class="modal-content artist-modal-content">
+            <div class="modal-header">
+                <h2 class="section-title">FICHA DEL ARTISTA</h2>
+                <button class="btn-close-modal" onclick="closeArtistModal()">✕</button>
+            </div>
+            <div class="modal-body artist-modal-body">
+                <!-- Artist bio intro -->
+                <div class="artist-intro">
+                    <h3 class="artist-modal-name">MANUEL ALEJANDRO MENDOZA VALENCIA</h3>
+                    <p class="artist-bio-text">
+                        Tecnólogo creativo. Licenciado en Arte y Comunicación Digitales por la UAM.
+                        Maestrante en Inteligencia Artificial Aplicada por el Tec de Monterrey.
+                        Becario de Jóvenes Creadores en Nuevas Tecnologías.
+                    </p>
+                </div>
+
+                <div class="hairline"></div>
+
+                <!-- Password challenge -->
+                <div id="artist-challenge" class="artist-challenge">
+                    <p class="artist-challenge-desc">
+                        La ficha completa del artista está cifrada en un archivo <mark>.sidf</mark>.
+                        Este es un ejemplo real del sistema. Intenta descifrar su archivo.
+                    </p>
+
+                    <div class="field">
+                        <label for="artist-password">CONTRASEÑA DEL ARCHIVO</label>
+                        <div class="password-input-wrapper">
+                            <input type="password" id="artist-password" placeholder="Intenta adivinar la contraseña"
+                                onkeydown="if(event.key==='Enter') tryArtistPassword()">
+                            <button type="button" class="toggle-password" onclick="togglePassword('artist-password')">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.5">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                                    <circle cx="12" cy="12" r="3" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="artist-attempt-row">
+                        <button class="btn-primary" onclick="tryArtistPassword()">
+                            DESCIFRAR ARCHIVO
+                        </button>
+                        <span id="artist-attempts" class="artist-attempts"></span>
+                    </div>
+
+                    <div id="artist-error" class="decrypt-error" style="display:none;"></div>
+
+                    <!-- Revealed after 3 failed attempts -->
+                    <div id="artist-reveal" class="artist-reveal" style="display:none;">
+                        <div class="hairline"></div>
+                        <p class="artist-reveal-text">
+                            En la vida real, esta contraseña la entregarías a tu persona de confianza.
+                            En este caso, te la comparto para que puedas experimentar el sistema:
+                        </p>
+                        <div class="artist-password-reveal">
+                            <span class="artist-password-label">CONTRASEÑA:</span>
+                            <code id="artist-password-value" class="artist-password-code"></code>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ficha result (hidden until decrypted) -->
+                <div id="artist-ficha-result" class="artist-ficha-result" style="display:none;">
+                    <div class="hairline"></div>
+                    <div id="artist-ficha-card" class="ficha-card artist-ficha-card">
+                        <!-- Will be populated dynamically -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="crypto.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
