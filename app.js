@@ -106,13 +106,13 @@ async function initCamera() {
     }
 
     try {
-        // Request camera access — prefer rear camera on mobile
+        // Request camera access — 720p/1080p for smooth live preview
+        // (2560px height caused low framerates on most cameras)
         const stream = await navigator.mediaDevices.getUserMedia({
             video: {
                 facingMode: 'user',
-                width: { ideal: 1920 },
-                height: { ideal: 2560 },
-                aspectRatio: { ideal: 3/4 }
+                width: { ideal: 1280, max: 1920 },
+                height: { ideal: 720, max: 1080 },
             }
         });
 
@@ -640,8 +640,8 @@ async function openMarkCamera(category) {
         const stream = await navigator.mediaDevices.getUserMedia({
             video: {
                 facingMode: category === 'body' ? 'environment' : 'user',
-                width: { ideal: 1920 },
-                height: { ideal: 1440 }
+                width: { ideal: 1280, max: 1920 },
+                height: { ideal: 720, max: 1080 },
             }
         });
         state.markCameraStream = stream;
